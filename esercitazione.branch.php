@@ -1,3 +1,7 @@
+<?php
+    echo $_POST['note'];
+?>
+
 <!DOCTYPE html>
 <html lang="it">
     <head>
@@ -33,11 +37,12 @@
                     <fieldset>
                         <legend>Inserisci una nota</legend>
                     </fieldset>
-                    <form>
+                    
+                    <form name="form" method="post">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Nome</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" autocomplete="off">
+                                <input type="text" name="note" class="form-control" autocomplete="off">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -56,3 +61,4 @@
         </div>
     </body>
 </html>
+
