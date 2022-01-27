@@ -1,5 +1,17 @@
 <?php
     echo $_POST['note'];
+
+    // nome del file in cui inserire i testi
+    $file = "testo.txt";
+
+    // apre il file in modalità "append", se non esiste lo crea
+    $fp = fopen($file, "a");
+
+    // inserisce i valori ricevuti dal form in coda al file
+    fputs($fp, htmlspecialchars($_POST["note"]))."<br>";
+
+    // chiude il file
+    fclose($fp);
 ?>
 
 <!DOCTYPE html>
